@@ -43,10 +43,10 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="hero-section">
-                <!-- Ganesha Image -->
+                <!-- Event Poster -->
                 <div class="ganesha-container">
                     <div class="image-frame">
-                        <img src="ganesha.png" alt="Lord Ganesha" class="ganesha-image" id="ganesha-img">
+                        <img src="ganesha.png" alt="Ganesh Chaturthi Event Poster" class="ganesha-image" id="ganesha-img">
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                         <h2 class="event-date">27th August 2025 - 31st August 2025</h2>
                         <p class="venue">
                             <a href="https://www.google.com/maps/search/?api=1&query=Exerzierhaus+Ingolstadt+(Klenzepark)" target="_blank" rel="noopener noreferrer">
-                                <img src="maps.png" alt="Google Maps" class="maps-icon"> 📍 Exerzierhaus Ingolstadt (Klenzepark)
+                                 📍 Exerzierhaus Ingolstadt (Klenzepark)
                             </a>
                         </p>
                         <div class="free-entry-badge">
@@ -86,10 +86,10 @@
                             </div>
                             <div class="highlight-item">
                                 <span class="highlight-icon">🧘‍♀️</span>
-                                <span class="highlight-text">Yoga Session - Details coming soon</span>
+                                <span class="highlight-text">Yoga Session</span>
                             </div>
                             <div class="highlight-item">
-                                <span class="highlight-icon">🎮</span>
+                                <span class="highlight-icon">🎉</span>
                                 <span class="highlight-text">Fun Games - Langdi Tang, Stapu & more</span>
                             </div>
                         </div>
@@ -296,21 +296,23 @@
         document.addEventListener('DOMContentLoaded', function() {
             const img = document.getElementById('ganesha-img');
             
-            // Fallback SVG for Ganesha image if not found
+            // Fallback SVG for poster image if not found
             img.onerror = function() {
                 this.src = 'data:image/svg+xml;base64,' + btoa(`
-                    <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+                            <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#FF8500;stop-opacity:1" />
-                            </radialGradient>
+                                <stop offset="50%" style="stop-color:#FF8500;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+                            </linearGradient>
                         </defs>
-                        <rect width="100%" height="100%" fill="url(#bg)"/>
-                        <text x="50%" y="40%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="28" fill="#8B4513">🕉️</text>
-                        <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="24" fill="#8B4513">Lord Ganesha</text>
-                        <text x="50%" y="60%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="16" fill="#8B4513">Vighnaharta</text>
-                        <text x="50%" y="70%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="20" fill="#8B4513">🐘</text>
+                        <rect width="100%" height="100%" fill="url(#bg)" rx="10"/>
+                        <text x="50%" y="20%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="32" fill="white" font-weight="bold">🕉️</text>
+                        <text x="50%" y="35%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="24" fill="white" font-weight="bold">Ganesh Chaturthi</text>
+                        <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="20" fill="white">Ingolstadt Cha Raja</text>
+                        <text x="50%" y="65%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="18" fill="white">27-31 August 2025</text>
+                        <text x="50%" y="85%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="28" fill="white">🐘</text>
                     </svg>
                 `);
             };

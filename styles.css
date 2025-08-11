@@ -194,7 +194,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* Ganesha Container */
+/* Poster Container */
 .ganesha-container {
     display: flex;
     justify-content: center;
@@ -203,20 +203,25 @@ body {
 
 .image-frame {
     position: relative;
-    padding: 20px;
+    padding: 15px;
     background: linear-gradient(45deg, #FFD700, #FF8500);
-    border-radius: 50%;
+    border-radius: 15px;
     box-shadow: 0 20px 40px rgba(255, 133, 0, 0.4);
     animation: glow 3s ease-in-out infinite alternate;
+    max-width: 900px;
+    width: fit-content;
 }
 
 .ganesha-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: auto;
+    max-width: 900px;
+    height: auto;
+    max-height: 600px;
+    border-radius: 10px;
+    object-fit: contain;
     border: 5px solid white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: block;
 }
 
 @keyframes glow {
@@ -671,8 +676,8 @@ body {
     }
     
     .ganesha-image {
-        width: 250px;
-        height: 250px;
+        max-width: 600px;
+        max-height: 420px;
     }
     
     .ganesh-text {
@@ -719,8 +724,8 @@ body {
     }
     
     .ganesha-image {
-        width: 200px;
-        height: 200px;
+        max-width: 780px;
+        max-height: 580px;
     }
     
     .event-details {
